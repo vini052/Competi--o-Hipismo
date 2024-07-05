@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competição de Hipismo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Campeonato Brasileiro Jovem Cavaleiro 2024</h1>
+
+        <!-- Formulário para adicionar competidores -->
+        <form id="competitorForm">
+            <h2>Adicionar Competidor</h2>
+            <label for="competitorName">Nome do Competidor:</label>
+            <input type="text" id="competitorName" required>
+            <label for="horseName">Nome do Cavalo:</label>
+            <input type="text" id="horseName" required>
+            <label for="federation">Federação:</label>
+            <input type="text" id="federation" required>
+            <label for="team">Faz parte da equipe?</label>
+            <input type="checkbox" id="team">
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <!-- Campos para o tempo ideal -->
+        <div class="ideal-time">
+            <h2>Tempo Ideal</h2>
+            <label for="idealTime">Tempo Ideal (segundos):</label>
+            <input type="number" id="idealTime" step="0.01" required>
+            <label for="allowedTimeBelow">Tempo Permitido Abaixo (segundos):</label>
+            <input type="number" id="allowedTimeBelow" step="0.01" required>
+            <label for="allowedTimeAbove">Tempo Permitido Acima (segundos):</label>
+            <input type="number" id="allowedTimeAbove" step="0.01" required>
+        </div>
+
+        <!-- Botões -->
+         <div class="buttons">
+            <button id="resetButton">Reset</button>
+            <button id="showIndividualButton">Mostrar Resultado Individual</button>
+            <button id="groupByTeamButton">Agrupar por Equipe</button>
+         </div>
+
+        <!-- Tabela para exibir competidores e resultados -->
+        <table id="competitorsTable">
+            <thead>
+                <tr>
+                    <th>Ordem de entrada</th>
+                    <th>Nome do Competidor</th>
+                    <th>Cavalo</th>
+                    <th>Federação</th>
+                    <th>Equipe</th>
+                    <th>Pontos Perdidos</th>
+                    <th>Tempo</th>
+                    <th>Aproximação ao Tempo Ideal</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas dos competidores serão inseridas aqui -->
+            </tbody>
+        </table>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
